@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 043c881861f5b7142af344aa3dc4dced
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Game Over
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 20c459c29a16c3d4b9c4564aa44b8288, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
