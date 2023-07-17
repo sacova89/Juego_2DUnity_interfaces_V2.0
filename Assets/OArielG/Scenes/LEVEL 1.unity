@@ -966,17 +966,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 183411172}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 443314201}
+  m_Father: {fileID: 1496967537}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -705, y: -405}
+  m_AnchoredPosition: {x: -376.76984, y: -202.04605}
   m_SizeDelta: {x: 38, y: 38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &183411174
@@ -1797,11 +1797,11 @@ GameObject:
   m_Component:
   - component: {fileID: 305459196}
   - component: {fileID: 305459195}
-  - component: {fileID: 305459204}
   - component: {fileID: 305459198}
   - component: {fileID: 305459199}
   - component: {fileID: 305459201}
   - component: {fileID: 305459203}
+  - component: {fileID: 305459204}
   m_Layer: 0
   m_Name: Personaje
   m_TagString: Player
@@ -1869,7 +1869,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 305459194}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.5119934, y: -0.30900574, z: -2}
+  m_LocalPosition: {x: -2.5119934, y: -0.30900574, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2076,14 +2076,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 305459194}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df11cb35786a5a34194c04b842a7d704, type: 3}
+  m_Script: {fileID: 11500000, guid: 45c24afecff5387488b0abbd56fce2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  capaSuelo:
-    serializedVersion: 2
-    m_Bits: 0
-  velocidad: 1
-  salto: 3
+  inicioX: -2.511993
+  inicioY: -0.3090057
 --- !u!1 &309749049
 GameObject:
   m_ObjectHideFlags: 0
@@ -2602,9 +2599,9 @@ GameObject:
   - component: {fileID: 348530932}
   - component: {fileID: 348530934}
   - component: {fileID: 348530933}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6036,6 +6033,7 @@ GameObject:
   - component: {fileID: 440270758}
   - component: {fileID: 440270757}
   - component: {fileID: 440270759}
+  - component: {fileID: 440270760}
   m_Layer: 0
   m_Name: Idle
   m_TagString: Untagged
@@ -6122,6 +6120,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3238ca0b795aceb4082276b289f03fca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &440270760
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440270756}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.54, y: 0.52}
+    newSize: {x: 0.54, y: 0.52}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.54, y: 0.52}
+  m_EdgeRadius: 0
 --- !u!1 &443314200
 GameObject:
   m_ObjectHideFlags: 0
@@ -6153,7 +6196,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 183411173}
   - {fileID: 1710361796}
   - {fileID: 1688181994}
   - {fileID: 1504924858}
@@ -7369,7 +7411,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 655125625}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.099, y: 0.11518648, z: -2.004255}
+  m_LocalPosition: {x: -0.099, y: 0.11518648, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11754,6 +11796,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 183411173}
   - {fileID: 443314201}
   m_Father: {fileID: 1882073181}
   m_RootOrder: -1
@@ -11971,6 +12014,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1523256552}
   - component: {fileID: 1523256553}
+  - component: {fileID: 1523256554}
   m_Layer: 0
   m_Name: DetectGround
   m_TagString: Untagged
@@ -11986,8 +12030,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1523256551}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.008, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.019, y: 0.42606, z: 0}
+  m_LocalScale: {x: 0.9556672, y: 3.8721924, z: 1.6718}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 305459196}
@@ -12022,7 +12066,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.02521056, y: -0.15418863}
@@ -12038,6 +12082,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.13899529, y: 0.013192892}
   m_EdgeRadius: 0
+--- !u!114 &1523256554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523256551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ac0a30f98ad3c14280b664dd2598c1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1543898558
 GameObject:
   m_ObjectHideFlags: 0
@@ -14298,6 +14354,7 @@ GameObject:
   - component: {fileID: 2035748443}
   - component: {fileID: 2035748442}
   - component: {fileID: 2035748445}
+  - component: {fileID: 2035748446}
   m_Layer: 0
   m_Name: On (38x38)_0
   m_TagString: Untagged
@@ -14422,7 +14479,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -14438,6 +14495,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.38, y: 0.38}
   m_EdgeRadius: 0
+--- !u!114 &2035748446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035748441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3238ca0b795aceb4082276b289f03fca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2038296375
 GameObject:
   m_ObjectHideFlags: 0
@@ -14747,21 +14816,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9196258480886867318}
-        m_TargetAssemblyTypeName: PanelSelect, Assembly-CSharp
-        m_MethodName: changePanel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PanelManager, Assembly-CSharp
-        m_MethodName: LoadController
+      - m_Target: {fileID: 9196258480886867319}
+        m_TargetAssemblyTypeName: ResetLevel, Assembly-CSharp
+        m_MethodName: resetScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17280,7 +17337,6 @@ GameObject:
   - component: {fileID: 1576236497030218904}
   - component: {fileID: 4777575885610794891}
   - component: {fileID: 306026796585757240}
-  - component: {fileID: 9196258480886867318}
   - component: {fileID: 9196258480886867319}
   m_Layer: 5
   m_Name: Reiniciar
@@ -17670,19 +17726,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &9196258480886867318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7243177800817885640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46ee3a722b807244ba2fdcfffab0a83d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panelSelect: 5
 --- !u!114 &9196258480886867319
 MonoBehaviour:
   m_ObjectHideFlags: 0
